@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="TIB-uG-zDl">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Preferences-->
+        <scene sceneID="Q2n-c3-ExX">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Preferences" id="Mkk-hG-8tY" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="kow-HQ-pvP"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Mjf-kx-oR6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1447" y="-157"/>
+        </scene>
+        <!--Premium-->
+        <scene sceneID="mZQ-X1-6ky">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Premium" id="Gue-Ml-67h" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="I8W-Ms-gge"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7SS-GZ-sAg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-37" y="-157"/>
+        </scene>
+        <!--Timer-->
+        <scene sceneID="NYk-iS-0hh">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Timer" id="FMQ-Mc-dHJ" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="l1G-AR-M1R"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hpv-5f-Zb6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-744" y="-157"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="qnh-HB-CEx">
+            <objects>
+                <tabBarController id="TIB-uG-zDl" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="hVR-Z2-L56">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" name="mainColor"/>
+                        <color key="barTintColor" name="tabColor"/>
+                        <color key="selectedImageTintColor" name="mainColor"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="Mkk-hG-8tY" kind="relationship" relationship="viewControllers" id="ktf-hC-8Aj"/>
+                        <segue destination="FMQ-Mc-dHJ" kind="relationship" relationship="viewControllers" id="JM2-TM-2Ds"/>
+                        <segue destination="Gue-Ml-67h" kind="relationship" relationship="viewControllers" id="vaP-du-AtF"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4LY-7o-yrB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-745" y="-705"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="mainColor">
+            <color red="0.50199997425079346" green="0.54900002479553223" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="tabColor">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+    <color key="tintColor" red="0.5" green="0.54913391440000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+</document>

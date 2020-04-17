@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="c5Y-A7-jGi">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Configure o Timer-->
+        <scene sceneID="7lH-Xj-uAh">
+            <objects>
+                <viewController hidesBottomBarWhenPushed="YES" id="EwB-tk-zLy" customClass="TimerConfigViewController" customModule="HoraDoCha" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="iL1-Fg-r3f">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0P7-GS-aNq">
+                                <rect key="frame" x="0.0" y="92" width="414" height="216"/>
+                            </pickerView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nome do Chá" textAlignment="natural" minimumFontSize="17" clearButtonMode="unlessEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Ldv-9f-hwr">
+                                <rect key="frame" x="20" y="328" width="374" height="34"/>
+                                <color key="tintColor" name="mainColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" name="bgColor"/>
+                        <constraints>
+                            <constraint firstItem="Ldv-9f-hwr" firstAttribute="top" secondItem="EVu-6w-UwG" secondAttribute="top" constant="240" id="61L-Ur-kXu"/>
+                            <constraint firstItem="EVu-6w-UwG" firstAttribute="trailing" secondItem="Ldv-9f-hwr" secondAttribute="trailing" constant="20" id="Gwk-xT-cyZ"/>
+                            <constraint firstItem="EVu-6w-UwG" firstAttribute="trailing" secondItem="0P7-GS-aNq" secondAttribute="trailing" id="RPY-ZZ-0Pj"/>
+                            <constraint firstItem="Ldv-9f-hwr" firstAttribute="leading" secondItem="EVu-6w-UwG" secondAttribute="leading" constant="20" id="fO7-bo-TEL"/>
+                            <constraint firstItem="0P7-GS-aNq" firstAttribute="leading" secondItem="EVu-6w-UwG" secondAttribute="leading" id="i4K-lg-BOt"/>
+                            <constraint firstItem="0P7-GS-aNq" firstAttribute="centerX" secondItem="EVu-6w-UwG" secondAttribute="centerX" id="jAU-y1-4zg"/>
+                            <constraint firstItem="Ldv-9f-hwr" firstAttribute="top" secondItem="0P7-GS-aNq" secondAttribute="bottom" constant="20" id="vxw-3l-9iz"/>
+                            <constraint firstItem="Ldv-9f-hwr" firstAttribute="centerX" secondItem="0P7-GS-aNq" secondAttribute="centerX" id="vy8-aG-3pT"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="EVu-6w-UwG"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Configure o Timer" largeTitleDisplayMode="always" id="XGT-Dx-T4C">
+                        <barButtonItem key="leftBarButtonItem" title="Cancelar" id="KLh-fE-AkJ">
+                            <color key="tintColor" name="mainColor"/>
+                            <connections>
+                                <action selector="cancelAction:" destination="EwB-tk-zLy" id="umb-CY-ahy"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Salvar" style="done" id="Nem-7J-qKV">
+                            <color key="tintColor" name="mainColor"/>
+                            <connections>
+                                <action selector="saveAction:" destination="EwB-tk-zLy" id="byT-YC-WaW"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="infusionTimePicker" destination="0P7-GS-aNq" id="HUb-6j-jjI"/>
+                        <outlet property="teaNameTextField" destination="Ldv-9f-hwr" id="T6b-fe-QVu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="j1X-r0-p0g" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3368.115942028986" y="992.41071428571422"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="owf-i1-oad">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="c5Y-A7-jGi" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="39L-1e-eyZ">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="EwB-tk-zLy" kind="relationship" relationship="rootViewController" id="CjO-N8-237"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bMK-Yl-0Cn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2457.971014492754" y="992.41071428571422"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="bgColor">
+            <color red="0.90980392156862744" green="0.89411764705882346" blue="0.81960784313725488" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="mainColor">
+            <color red="0.50199997425079346" green="0.54900002479553223" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

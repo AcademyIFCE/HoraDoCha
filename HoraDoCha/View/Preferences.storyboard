@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="u2i-1B-3Ql">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Preferências-->
+        <scene sceneID="4Ij-DB-86N">
+            <objects>
+                <viewController id="Fjg-7M-hPH" customClass="PreferencesViewController" customModule="HoraDoCha" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="uNo-LJ-hvv">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Qual sua xícara de chá?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RhZ-Cp-llR">
+                                <rect key="frame" x="20" y="168.5" width="374" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="q01-NG-A8s">
+                                <rect key="frame" x="20" y="386.5" width="374" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="weN-2u-h95"/>
+                                </constraints>
+                            </pickerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Som da Notificação" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oyC-Wl-MuI">
+                                <rect key="frame" x="20" y="342.5" width="374" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="O38-z2-mHf">
+                                <rect key="frame" x="20" y="212.5" width="374" height="90"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0iq-o9-oDy">
+                                        <rect key="frame" x="0.0" y="0.0" width="90" height="90"/>
+                                        <state key="normal" backgroundImage="tea1"/>
+                                        <connections>
+                                            <action selector="selectCupAction:" destination="Fjg-7M-hPH" eventType="touchUpInside" id="y8p-aL-mk2"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kN5-uv-NYI">
+                                        <rect key="frame" x="95" y="0.0" width="89.5" height="90"/>
+                                        <state key="normal" backgroundImage="tea2"/>
+                                        <connections>
+                                            <action selector="selectCupAction:" destination="Fjg-7M-hPH" eventType="touchUpInside" id="ioJ-kF-2f6"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5CM-qG-Dx1">
+                                        <rect key="frame" x="189.5" y="0.0" width="90" height="90"/>
+                                        <state key="normal" backgroundImage="tea3"/>
+                                        <connections>
+                                            <action selector="selectCupAction:" destination="Fjg-7M-hPH" eventType="touchUpInside" id="rc2-dg-sAt"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hWG-ms-zAs">
+                                        <rect key="frame" x="284.5" y="0.0" width="89.5" height="90"/>
+                                        <state key="normal" backgroundImage="tea4"/>
+                                        <connections>
+                                            <action selector="selectCupAction:" destination="Fjg-7M-hPH" eventType="touchUpInside" id="8Qx-8p-bKa"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="90" id="hat-Wo-GgI"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" name="bgColor"/>
+                        <color key="tintColor" name="mainColor"/>
+                        <constraints>
+                            <constraint firstItem="q01-NG-A8s" firstAttribute="leading" secondItem="RhZ-Cp-llR" secondAttribute="leading" id="1dx-Mz-Lz8"/>
+                            <constraint firstItem="gb8-5N-cei" firstAttribute="trailing" secondItem="RhZ-Cp-llR" secondAttribute="trailing" constant="20" id="BcS-qQ-OXB"/>
+                            <constraint firstItem="q01-NG-A8s" firstAttribute="top" secondItem="oyC-Wl-MuI" secondAttribute="bottom" constant="20" id="NWa-w3-1R2"/>
+                            <constraint firstItem="oyC-Wl-MuI" firstAttribute="top" secondItem="O38-z2-mHf" secondAttribute="bottom" constant="40" id="O6X-Ep-Qaf"/>
+                            <constraint firstItem="oyC-Wl-MuI" firstAttribute="trailing" secondItem="RhZ-Cp-llR" secondAttribute="trailing" id="UTv-gu-F22"/>
+                            <constraint firstItem="O38-z2-mHf" firstAttribute="top" secondItem="RhZ-Cp-llR" secondAttribute="bottom" constant="20" id="XVF-kG-7SP"/>
+                            <constraint firstItem="RhZ-Cp-llR" firstAttribute="top" secondItem="gb8-5N-cei" secondAttribute="top" constant="20" id="d8A-gR-Qvx"/>
+                            <constraint firstItem="O38-z2-mHf" firstAttribute="centerX" secondItem="RhZ-Cp-llR" secondAttribute="centerX" id="mfO-JY-p4I"/>
+                            <constraint firstItem="O38-z2-mHf" firstAttribute="width" secondItem="RhZ-Cp-llR" secondAttribute="width" id="nft-CZ-lQ8"/>
+                            <constraint firstItem="oyC-Wl-MuI" firstAttribute="leading" secondItem="RhZ-Cp-llR" secondAttribute="leading" id="nht-fy-7ch"/>
+                            <constraint firstItem="q01-NG-A8s" firstAttribute="trailing" secondItem="RhZ-Cp-llR" secondAttribute="trailing" id="sDD-lP-Ru9"/>
+                            <constraint firstItem="RhZ-Cp-llR" firstAttribute="centerX" secondItem="gb8-5N-cei" secondAttribute="centerX" id="yON-UM-qFi"/>
+                            <constraint firstItem="RhZ-Cp-llR" firstAttribute="leading" secondItem="gb8-5N-cei" secondAttribute="leading" constant="20" id="yvw-Wj-Tco"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="gb8-5N-cei"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Preferências" largeTitleDisplayMode="always" id="OVH-SF-KTk"/>
+                    <connections>
+                        <outlet property="cup1Button" destination="0iq-o9-oDy" id="4EA-7f-BoQ"/>
+                        <outlet property="cup2Button" destination="kN5-uv-NYI" id="UNt-rW-9ec"/>
+                        <outlet property="cup3Button" destination="5CM-qG-Dx1" id="hX6-ht-w63"/>
+                        <outlet property="cup4Button" destination="hWG-ms-zAs" id="cey-Bi-IcN"/>
+                        <outlet property="soundPicker" destination="q01-NG-A8s" id="iVk-0j-uYA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OUa-eC-lPC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="800.00000000000011" y="94.419642857142847"/>
+        </scene>
+        <!--Preferencias-->
+        <scene sceneID="j1J-eC-pD8">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="u2i-1B-3Ql" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Preferencias" image="preferences_small_idle" selectedImage="preferences_small_selected" id="dH0-Xf-GWQ">
+                        <inset key="largeContentSizeImageInsets" minX="0.0" minY="50" maxX="0.0" maxY="0.0"/>
+                        <color key="badgeColor" red="0.5" green="0.54913391440000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </tabBarItem>
+                    <toolbarItems/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="CeW-ef-GsL">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Fjg-7M-hPH" kind="relationship" relationship="rootViewController" id="WAR-R7-tIU"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2Tw-y0-fP9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-110.14492753623189" y="94.419642857142847"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="preferences_small_idle" width="28" height="28.5"/>
+        <image name="preferences_small_selected" width="28" height="28.5"/>
+        <image name="tea1" width="500" height="500"/>
+        <image name="tea2" width="500" height="500"/>
+        <image name="tea3" width="500" height="500"/>
+        <image name="tea4" width="500" height="500"/>
+        <namedColor name="bgColor">
+            <color red="0.90980392156862744" green="0.89411764705882346" blue="0.81960784313725488" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="mainColor">
+            <color red="0.50199997425079346" green="0.54900002479553223" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+    <color key="tintColor" red="0.5" green="0.54913391440000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+</document>
