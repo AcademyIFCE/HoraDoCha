@@ -7,8 +7,9 @@
 //
 
 import Foundation
+import UIKit
 
-struct TeaTimerModel {
+class TeaTimerModel {
     
     weak var timer: Timer?
     
@@ -54,13 +55,70 @@ struct TeaTimerModel {
         UserDefaults.standard.value(forKey: UserDefaultsKeys.selectedCup.rawValue) as? String ?? "tea1"
     }
     
-    mutating func setTimer(minutes: Int) {
+    func setTimer(minutes: Int) {
         self.infusionTimeInterval = TimeInterval(minutes * 60)
         timer?.invalidate()
     }
     
-    mutating func setTimer(interval: TimeInterval) {
+    func setTimer(interval: TimeInterval) {
         self.infusionTimeInterval = interval
     }
+    
+}
+
+extension TeaTimerModel: TimerDelegate {
+    
+    func startTimerWithController(controller: UIViewController) {
+        
+        //Pegar referêcia da controller
+        let controllerR = controller as? TimerViewController
+        
+        // Cria o Timer
+        timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { (timer) in
+            //Closure que configura o código que vai rodar a cada intervalo de tempo
+            
+            print("tick \(self.timerDescription)")
+            
+            //Decrementa os segundos do teaTimer
+            self.setTimer(interval: self.infusionTimeInterval - 1)
+            
+            //Quando o tempo do teaTimer for menor que zero
+            if self.infusionTimeInterval < 0 {
+                
+                //Para o timer
+                timer.invalidate()
+                
+                //Reseta o teaTimer para o tempo padrao 3
+                self.setTimer(minutes: 3)
+                
+                DispatchQueue.main.async { //Na Thread main... (Precisa ser na main porque vai modificar diretamente algo na tela)
+                    
+                    //Cria alert (janelinha modal padrao do iOS)
+                    let alert = UIAlertController(title: "Hora do Chá!", message: nil, preferredStyle: .alert)
+                    
+                    //Cria botão da janelinha, passando uma ação pra executar quando ele for clicado no handler dele
+                    let button = UIAlertAction(title: "Resetar Timer", style: .default, handler: { alert in
+                        controllerR?.settingsButton(controllerR!)
+                    })
+                    
+                    //Adiciona botao no alert
+                    alert.addAction(button)
+                    
+                    //A tela (self) exibe o alert para o usuário
+                    controllerR?.present(alert, animated: true, completion: nil)
+                    
+                }
+                
+            }
+             //Seta a informação na label da controller
+             controllerR?.showTimerDataOnView()
+        }
+        
+        
+        
+        //Começa a rodar o timer
+        timer?.fire()
+    }
+    
     
 }

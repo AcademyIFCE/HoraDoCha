@@ -22,6 +22,8 @@ class TimerViewController: UIViewController {
         }
     }
     
+    var timerDelegate: TimerDelegate?
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         showTimerDataOnView()
@@ -41,49 +43,9 @@ class TimerViewController: UIViewController {
     @IBAction func timerButton(_ sender: Any) {
         
         self.timerButton.isHidden = true
-        
-        // Cria o Timer
-        let timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { (timer) in
-            //Closure que configura o código que vai rodar a cada intervalo de tempo
-            
-            print("tick \(self.teaTimer.timerDescription)")
-            
-            //Decrementa os segundos do teaTimer
-            self.teaTimer.setTimer(interval: self.teaTimer.infusionTimeInterval - 1)
-            
-            //Quando o tempo do teaTimer for menor que zero
-            if self.teaTimer.infusionTimeInterval < 0 {
-                
-                //Para o timer
-                timer.invalidate()
-                
-                //Reseta o teaTimer para o tempo padrao 3
-                self.teaTimer.setTimer(minutes: 3)
-                
-                DispatchQueue.main.async { //Na Thread main... (Precisa ser na main porque vai modificar diretamente algo na tela)
-                    
-                    //Cria alert (janelinha modal padrao do iOS)
-                    let alert = UIAlertController(title: "Hora do Chá!", message: nil, preferredStyle: .alert)
-                    
-                    //Cria botão da janelinha, passando uma ação pra executar quando ele for clicado no handler dele
-                    let button = UIAlertAction(title: "Resetar Timer", style: .default, handler: { alert in
-                        self.settingsButton(self)
-                    })
-                    
-                    //Adiciona botao no alert
-                    alert.addAction(button)
-                    
-                    //A tela (self) exibe o alert para o usuário
-                    self.present(alert, animated: true, completion: nil)
-                    
-                }
-            }
-        }
-        
-        self.teaTimer.timer = timer
-        
-        //Começa a rodar o timer
-        timer.fire()
+        timerDelegate = self.teaTimer
+        timerDelegate!.startTimerWithController(controller: self)
+       
         
     }
     
