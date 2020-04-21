@@ -22,8 +22,6 @@ class TimerViewController: UIViewController {
         }
     }
     
-    var timerDelegate: TimerDelegate?
-    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         showTimerDataOnView()
@@ -42,10 +40,13 @@ class TimerViewController: UIViewController {
     
     @IBAction func timerButton(_ sender: Any) {
         
+        //Seta o timer delegate
+        teaTimer.delegate = self
+        
         self.timerButton.isHidden = true
-        timerDelegate = self.teaTimer
-        timerDelegate!.startTimerWithController(controller: self)
-       
+        
+        //Chama a função que cria e atualiza o timer
+        teaTimer.createTimer()
         
     }
     
@@ -71,6 +72,34 @@ extension TimerViewController: SettingsDelegate {
         self.teaTimer.setTimer(minutes: minutes)
         self.teaTimer.teaName = name
         self.timerButton.isHidden = false
+    }
+    
+}
+
+extension TimerViewController: TimerDelegate {
+    
+    func createTimerAlert(title: String) {
+        DispatchQueue.main.async { //Na Thread main... (Precisa ser na main porque vai modificar diretamente algo na tela)
+            
+            //Cria alert (janelinha modal padrao do iOS)
+            let alert = UIAlertController(title: title, message: nil, preferredStyle: .alert)
+            
+            //Cria botão da janelinha, passando uma ação pra executar quando ele for clicado no handler dele
+            let button = UIAlertAction(title: "Resetar Timer", style: .default, handler: { alert in
+                self.settingsButton(self)
+            })
+            
+            //Adiciona botao no alert
+            alert.addAction(button)
+            
+            //A tela (self) exibe o alert para o usuário
+            self.present(alert, animated: true, completion: nil)
+            
+        }
+    }
+    
+    func updateTimerLabel(description: String) {
+        self.timerLabel.text = description
     }
     
 }

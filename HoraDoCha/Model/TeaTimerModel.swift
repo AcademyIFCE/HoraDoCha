@@ -12,6 +12,7 @@ import UIKit
 class TeaTimerModel {
     
     weak var timer: Timer?
+    weak var delegate: TimerDelegate?
     
     private(set) var infusionTimeInterval: TimeInterval {
         get {
@@ -64,14 +65,7 @@ class TeaTimerModel {
         self.infusionTimeInterval = interval
     }
     
-}
-
-extension TeaTimerModel: TimerDelegate {
-    
-    func startTimerWithController(controller: UIViewController) {
-        
-        //Pegar referêcia da controller
-        let controllerR = controller as? TimerViewController
+    func createTimer() {
         
         // Cria o Timer
         timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { (timer) in
@@ -91,34 +85,15 @@ extension TeaTimerModel: TimerDelegate {
                 //Reseta o teaTimer para o tempo padrao 3
                 self.setTimer(minutes: 3)
                 
-                DispatchQueue.main.async { //Na Thread main... (Precisa ser na main porque vai modificar diretamente algo na tela)
-                    
-                    //Cria alert (janelinha modal padrao do iOS)
-                    let alert = UIAlertController(title: "Hora do Chá!", message: nil, preferredStyle: .alert)
-                    
-                    //Cria botão da janelinha, passando uma ação pra executar quando ele for clicado no handler dele
-                    let button = UIAlertAction(title: "Resetar Timer", style: .default, handler: { alert in
-                        controllerR?.settingsButton(controllerR!)
-                    })
-                    
-                    //Adiciona botao no alert
-                    alert.addAction(button)
-                    
-                    //A tela (self) exibe o alert para o usuário
-                    controllerR?.present(alert, animated: true, completion: nil)
-                    
-                }
+                self.delegate?.createTimerAlert(title: "Hora do Chá!")
                 
             }
-             //Seta a informação na label da controller
-             controllerR?.showTimerDataOnView()
+            //Seta a informação na label da controller
+            self.delegate?.updateTimerLabel(description: self.timerDescription)
         }
-        
-        
         
         //Começa a rodar o timer
         timer?.fire()
     }
-    
     
 }

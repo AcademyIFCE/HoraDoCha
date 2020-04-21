@@ -192,13 +192,13 @@
         <image name="star_small_idle" width="28" height="28.5"/>
         <image name="star_small_selected" width="28" height="28.5"/>
         <namedColor name="bgColor">
-            <color red="0.90980392156862744" green="0.89411764705882346" blue="0.81960784313725488" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <color red="0.9100000262260437" green="0.89399999380111694" blue="0.81999999284744263" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
         <namedColor name="mainColor">
             <color red="0.50199997425079346" green="0.54900002479553223" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="tabColor">
-            <color red="1" green="0.98347701149425282" blue="0.90086206896551724" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <color red="1" green="0.98299998044967651" blue="0.90100002288818359" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
     </resources>
     <color key="tintColor" name="mainColor"/>

@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 
-protocol TimerDelegate {
-    func startTimerWithController(controller: UIViewController)
+protocol TimerDelegate: class {
+    func updateTimerLabel(description: String)
+    func createTimerAlert(title: String)
 }
