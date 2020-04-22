@@ -209,7 +209,7 @@
         <image name="tea1" width="500" height="500"/>
         <image name="timer" catalog="system" width="64" height="60"/>
         <namedColor name="bgColor">
-            <color red="0.90980392156862744" green="0.89411764705882346" blue="0.81960784313725488" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <color red="0.9100000262260437" green="0.89399999380111694" blue="0.81999999284744263" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
         <namedColor name="mainColor">
             <color red="0.50199997425079346" green="0.54900002479553223" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

@@ -27,6 +27,7 @@
 		0699182B243CB75800077F61 /* HoraDoChaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0699182A243CB75800077F61 /* HoraDoChaUITests.swift */; };
 		0699183C243CC28100077F61 /* TimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0699183B243CC28100077F61 /* TimerViewController.swift */; };
 		0699183F243CC2C700077F61 /* TeaTimerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0699183E243CC2C700077F61 /* TeaTimerModel.swift */; };
+		81E1FFD9244A0130006CB542 /* TimerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E1FFD8244A0130006CB542 /* TimerDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +74,7 @@
 		0699182C243CB75800077F61 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0699183B243CC28100077F61 /* TimerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerViewController.swift; sourceTree = "<group>"; };
 		0699183E243CC2C700077F61 /* TeaTimerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeaTimerModel.swift; sourceTree = "<group>"; };
+		81E1FFD8244A0130006CB542 /* TimerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +106,7 @@
 			isa = PBXGroup;
 			children = (
 				0633DDCE243D026A00EFB86D /* SettingsDelegate.swift */,
+				81E1FFD8244A0130006CB542 /* TimerDelegate.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -337,6 +340,7 @@
 				0633DDE424449F3300EFB86D /* UserDefaultKeys.swift in Sources */,
 				0699183C243CC28100077F61 /* TimerViewController.swift in Sources */,
 				0699183F243CC2C700077F61 /* TeaTimerModel.swift in Sources */,
+				81E1FFD9244A0130006CB542 /* TimerDelegate.swift in Sources */,
 				0633DDE02443960200EFB86D /* PreferencesModel.swift in Sources */,
 				0633DDEB24450F6C00EFB86D /* PremiumViewController.swift in Sources */,
 				0633DDCD243D015C00EFB86D /* TimerConfigViewController.swift in Sources */,
