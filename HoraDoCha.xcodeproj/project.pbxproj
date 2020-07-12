@@ -23,10 +23,11 @@
 		0699180B243CB75300077F61 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0699180A243CB75300077F61 /* SceneDelegate.swift */; };
 		06991812243CB75800077F61 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 06991811243CB75800077F61 /* Assets.xcassets */; };
 		06991815243CB75800077F61 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 06991813243CB75800077F61 /* LaunchScreen.storyboard */; };
-		06991820243CB75800077F61 /* HoraDoChaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0699181F243CB75800077F61 /* HoraDoChaTests.swift */; };
 		0699182B243CB75800077F61 /* HoraDoChaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0699182A243CB75800077F61 /* HoraDoChaUITests.swift */; };
 		0699183C243CC28100077F61 /* TimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0699183B243CC28100077F61 /* TimerViewController.swift */; };
 		0699183F243CC2C700077F61 /* TeaTimerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0699183E243CC2C700077F61 /* TeaTimerModel.swift */; };
+		77D24F2624BB7C24006ED177 /* TearTimeModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77D24F2524BB7C24006ED177 /* TearTimeModelTests.swift */; };
+		77D24F2824BB7C6D006ED177 /* PreferencesModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77D24F2724BB7C6D006ED177 /* PreferencesModelTests.swift */; };
 		81E1FFD9244A0130006CB542 /* TimerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E1FFD8244A0130006CB542 /* TimerDelegate.swift */; };
 /* End PBXBuildFile section */
 
@@ -67,13 +68,14 @@
 		06991814243CB75800077F61 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		06991816243CB75800077F61 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0699181B243CB75800077F61 /* HoraDoChaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HoraDoChaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		0699181F243CB75800077F61 /* HoraDoChaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoraDoChaTests.swift; sourceTree = "<group>"; };
 		06991821243CB75800077F61 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		06991826243CB75800077F61 /* HoraDoChaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HoraDoChaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0699182A243CB75800077F61 /* HoraDoChaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoraDoChaUITests.swift; sourceTree = "<group>"; };
 		0699182C243CB75800077F61 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0699183B243CC28100077F61 /* TimerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerViewController.swift; sourceTree = "<group>"; };
 		0699183E243CC2C700077F61 /* TeaTimerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeaTimerModel.swift; sourceTree = "<group>"; };
+		77D24F2524BB7C24006ED177 /* TearTimeModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TearTimeModelTests.swift; sourceTree = "<group>"; };
+		77D24F2724BB7C6D006ED177 /* PreferencesModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesModelTests.swift; sourceTree = "<group>"; };
 		81E1FFD8244A0130006CB542 /* TimerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -148,7 +150,8 @@
 		0699181E243CB75800077F61 /* HoraDoChaTests */ = {
 			isa = PBXGroup;
 			children = (
-				0699181F243CB75800077F61 /* HoraDoChaTests.swift */,
+				77D24F2524BB7C24006ED177 /* TearTimeModelTests.swift */,
+				77D24F2724BB7C6D006ED177 /* PreferencesModelTests.swift */,
 				06991821243CB75800077F61 /* Info.plist */,
 			);
 			path = HoraDoChaTests;
@@ -270,6 +273,7 @@
 					};
 					0699181A243CB75800077F61 = {
 						CreatedOnToolsVersion = 11.3.1;
+						LastSwiftMigration = 1150;
 						TestTargetID = 06991804243CB75300077F61;
 					};
 					06991825243CB75800077F61 = {
@@ -353,7 +357,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				06991820243CB75800077F61 /* HoraDoChaTests.swift in Sources */,
+				77D24F2824BB7C6D006ED177 /* PreferencesModelTests.swift in Sources */,
+				77D24F2624BB7C24006ED177 /* TearTimeModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -555,6 +560,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 526YR6WHWC;
 				INFOPLIST_FILE = HoraDoChaTests/Info.plist;
@@ -566,6 +572,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.gabrielabezerra.HoraDoChaTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HoraDoCha.app/HoraDoCha";
@@ -577,6 +584,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 526YR6WHWC;
 				INFOPLIST_FILE = HoraDoChaTests/Info.plist;
